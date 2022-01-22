@@ -1,0 +1,50 @@
+/* HeroSearch private styles */
+
+.example-full-width {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+ margin-top: 2rem;
+} 
+
+input {
+  padding: .5rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.search-result li a {
+  border-bottom: 1px solid #3f51b5;
+  display: inline-block;
+  padding: .5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.search-result li a:hover {
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 4px;
+}
+
+ul.search-result {
+  margin-top: 0;
+  padding-left: 0;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
