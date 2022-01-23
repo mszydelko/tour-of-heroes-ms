@@ -83,6 +83,9 @@ input {
   color:#525252;
   background-color: #e8e8e8;
 }
+.filter{
+  min-width: 250px;
+}
 @media (min-width: 950px){
   .container{
     width: 50%;

@@ -15,7 +15,6 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -25,7 +24,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
@@ -37,7 +35,6 @@ import { MatIconModule } from '@angular/material/icon'
         ReactiveFormsModule,
         MatInputModule,
         MatNativeDateModule,
-
         BrowserAnimationsModule,
         MatDatepickerModule,
         MatSelectModule,
@@ -45,7 +42,6 @@ import { MatIconModule } from '@angular/material/icon'
         MatTableModule,
         MatButtonModule,
         MatToolbarModule,
-        MatMenuModule,
         MatIconModule,
         // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
         // and returns simulated server responses.

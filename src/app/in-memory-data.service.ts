@@ -9,17 +9,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
       {
-        "id": 11,
-        "name": "Horne",
-        "surname": "Bryan",
-        "isGood": true,
-        "voted": "PO",
-        "description": "Tempor dolore officia aliqua adipisicing sit duis ipsum reprehenderit est ut anim irure aliqua veniam. Incididunt incididunt do eu incididunt irure consectetur sunt ut veniam proident commodo esse. Anim nulla quis qui dolor exercitation et exercitation consequat nulla mollit veniam commodo anim velit.\r\n",
-        "age": 21,
-        "birthDate": "1996-08-15"
-      },
-      {
-        "id": 12,
+        "id": 1,
         "name": "Mari",
         "surname": "West",
         "isGood": true,
@@ -29,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "2019-04-17"
       },
       {
-        "id": 13,
+        "id": 2,
         "name": "Jerry",
         "surname": "Cash",
         "isGood": true,
@@ -39,7 +29,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "1991-04-06"
       },
       {
-        "id": 14,
+        "id": 3,
         "name": "Lourdes",
         "surname": "Bennett",
         "isGood": true,
@@ -49,7 +39,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "1992-05-08"
       },
       {
-        "id": 15,
+        "id": 4,
         "name": "Edwina",
         "surname": "Calderon",
         "isGood": false,
@@ -59,7 +49,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "2021-11-21"
       },
       {
-        "id": 16,
+        "id": 5,
         "name": "Edith",
         "surname": "Burke",
         "isGood": false,
@@ -69,7 +59,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "2010-03-04"
       },
       {
-        "id": 17,
+        "id": 6,
         "name": "Richards",
         "surname": "Strong",
         "isGood": true,
@@ -79,7 +69,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "1993-10-18"
       },
       {
-        "id": 18,
+        "id": 7,
         "name": "Fields",
         "surname": "Buck",
         "isGood": true,
@@ -89,7 +79,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "birthDate": "1996-01-20"
       },
       {
-        "id": 19,
+        "id": 8,
         "name": "Diane",
         "surname": "Middleton",
         "isGood": false,
@@ -97,16 +87,6 @@ export class InMemoryDataService implements InMemoryDbService {
         "description": "Incididunt sit cupidatat occaecat laborum eu incididunt ipsum occaecat deserunt qui ea est dolore id. Eiusmod minim amet magna fugiat elit sunt cillum. Dolor ullamco tempor nisi ut culpa in id consectetur sunt. Ex dolor culpa Lorem enim cillum duis eiusmod. Ex pariatur quis qui cupidatat sunt esse ipsum et enim.\r\n",
         "age": 35,
         "birthDate": "2002-03-14"
-      },
-      {
-        "id": 20,
-        "name": "Kenya",
-        "surname": "Carr",
-        "isGood": true,
-        "voted": "PIS",
-        "description": "Occaecat nulla aliqua exercitation ut laboris qui sint. Sint velit voluptate elit qui velit fugiat aute labore officia id esse. Deserunt amet consequat ea enim non exercitation.\r\n",
-        "age": 20,
-        "birthDate": "1997-05-22"
       }
     ];
     return {heroes};
@@ -122,9 +102,3 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 }
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

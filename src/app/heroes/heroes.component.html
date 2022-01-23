@@ -49,6 +49,10 @@
 <!-- hero table -->
 <h2>List of heroes</h2>
 <div class="list">
+  <mat-form-field class="filter">
+    <mat-label>Search by name, surname, age and description</mat-label>
+    <input matInput (keyup)="addFilter($event)" placeholder="Search" #input>
+  </mat-form-field>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
