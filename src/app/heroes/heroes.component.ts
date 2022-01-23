@@ -8,6 +8,9 @@ import * as _moment from 'moment';
 interface VotingListInterface {
     value: string;
 }
+// interface GoodListInterface {
+//     value: string;
+// }
 
 @Component({
     selector: 'app-heroes',
@@ -24,6 +27,11 @@ export class HeroesComponent implements OnInit {
         {value: 'PO'}
     ];
 
+    // goodList: GoodListInterface[] = [
+    //     {value: "Yes"},
+    //     {value: "No"}
+    // ];
+    
     displayedColumns: string[] = ['id', 'name', 'surname', 'age', 'birthDate', 'voted', 'isGood', 'description', 'delete'];
     
     constructor(private heroService: HeroService, private fb: FormBuilder, private cdr: ChangeDetectorRef) {
@@ -41,31 +49,29 @@ export class HeroesComponent implements OnInit {
 
     ngOnInit(): void {
         this.getHeroes();
-    //    this.heroForm.get('birthDate')?.valueChanges.subscribe((value: Date) => {
-    //         if(value){
-    //             this.calculateAge(value);
-    //         }
-    //     })
+        this.heroForm.get('birthDate')?.valueChanges.subscribe((value: Date) => {
+            if(value){
+                this.calculateAge(value);
+            }
+        })
     }
 
-    addFilter(event: Event) {
+    addNameFilter(event: Event) {
         const filterData = (event.target as HTMLInputElement).value;
-        this.dataSource.filter = filterData.trim().toLocaleLowerCase();
+         this.dataSource.filter = filterData.trim().toLocaleLowerCase();
+
     }
-
-
 
     getHeroes(): void {
         this.heroService.getHeroes()
             .subscribe(heroes => this.dataSource.data = heroes);
     }
 
-    // calculateAge(date: Date): void{
-    //     let age = new Date(Date.now() - date.getTime());
-    //     this.heroForm.get('age')?.patchValue(Math.abs(age.getUTCFullYear() - 1970))
-    // }
+    calculateAge(date: Date): void{
+        let age = new Date(Date.now() - date.getTime());
+        this.heroForm.get('age')?.patchValue(Math.abs(age.getUTCFullYear() - 1970))
+    }
 
-    // add hero to hero list function
     add(form: FormGroup) {
         if (form.invalid) {
             form.markAllAsTouched();
@@ -82,7 +88,6 @@ export class HeroesComponent implements OnInit {
 
     }
 
-    // delete hero from table
     delete(hero: Hero): void {
         this.heroService.deleteHero(hero.id).subscribe(() => {
             this.getHeroes();
@@ -90,7 +95,6 @@ export class HeroesComponent implements OnInit {
         });
     }
 
-    // generate JSON file
     generateJson(): void{
         let uri = "data:application/json;charset=UTF-8," + encodeURIComponent(JSON.stringify(this.dataSource.data));
         const anchorElement = document.createElement('a');

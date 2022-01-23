@@ -83,8 +83,13 @@ input {
   color:#525252;
   background-color: #e8e8e8;
 }
+.filters-container{
+  display: flex;
+  align-items: flex-end;
+}
 .filter{
   min-width: 250px;
+  padding: 0 10px;
 }
 @media (min-width: 950px){
   .container{
