@@ -1,11 +1,6 @@
 <div *ngIf="hero">
   <h2>{{hero.name | uppercase}} {{hero.surname | uppercase}} Details</h2>
-
-  <!-- <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
-  </div> -->
-
+  
   <mat-form-field class="hero-name--input">
    <mat-label for="hero-name">Hero name: </mat-label>
     <input matInput  id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
@@ -13,13 +8,21 @@
 
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
+
   <div><span>ID: </span>{{hero.id}}</div>
   <div><span>Age: </span>{{hero.age}}</div>
   <div><span>Birth date: </span>{{hero.birthDate}}</div>
   <div><span>Vote: </span>{{hero.voted}}</div>
   <div><span>Is he good? </span>{{hero.isGood}}</div>
   <div><span>About: </span>{{hero.description}}</div>
+
 </div>
+
+
+
+
+
+
 
 
 <!-- 
