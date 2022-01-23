@@ -8,9 +8,6 @@ import * as _moment from 'moment';
 interface VotingListInterface {
     value: string;
 }
-// interface GoodListInterface {
-//     value: string;
-// }
 
 @Component({
     selector: 'app-heroes',
@@ -26,12 +23,7 @@ export class HeroesComponent implements OnInit {
         {value: 'PIS'},
         {value: 'PO'}
     ];
-
-    // goodList: GoodListInterface[] = [
-    //     {value: "Yes"},
-    //     {value: "No"}
-    // ];
-    
+   
     displayedColumns: string[] = ['id', 'name', 'surname', 'age', 'birthDate', 'voted', 'isGood', 'description', 'delete'];
     
     constructor(private heroService: HeroService, private fb: FormBuilder, private cdr: ChangeDetectorRef) {
@@ -44,7 +36,6 @@ export class HeroesComponent implements OnInit {
             isGood: [false, Validators.required],
             description: ['', [Validators.maxLength(512)]]
         });
-
     }
 
     ngOnInit(): void {
